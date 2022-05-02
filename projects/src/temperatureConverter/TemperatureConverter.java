@@ -1,15 +1,36 @@
 package temperatureConverter;
 
 public class TemperatureConverter {
-	public static final void toCelcius(int tempFahrenheit) {
+	public static final String toCelcius(double tempFahrenheit) {
 
-		int tempInCelcius = (int) ((tempFahrenheit - 32) * 0.5556);
-		System.out.println(tempInCelcius + "°C");
+		double tempInCelcius = (tempFahrenheit - 32) * ((double) 5 / 9);
+		String twoDeci = String.format("%.2f", tempInCelcius);
+		tempInCelcius = Double.parseDouble(twoDeci);
+		String output; 
+		if (tempInCelcius % 1 == 0) { 
+			output = Integer.toString((int) tempInCelcius) + "°C";
+		} else {
+			output = Double.toString(tempInCelcius) + "°C";
+		}
+		
+		System.out.println(output);
+		return output;
 	}
 
-	public static final void toFahrenheit(int celcius) {
+	public static final String toFahrenheit(double celcius) {
 
-		int tempInFahrenheit = (int) ((celcius * 1.8) + 32);  
-		System.out.println(tempInFahrenheit + "°F");
+		double tempInFahrenheit = ((celcius * 1.8) + 32);  
+		String twoDeci = String.format("%.2f", tempInFahrenheit);
+		tempInFahrenheit = Double.parseDouble(twoDeci);
+		
+		String output;
+		if(tempInFahrenheit % 1 == 0) {
+			output = Integer.toString((int) tempInFahrenheit) + "°F";
+		} else {
+			output = Double.toString(tempInFahrenheit) + "°F";
+		}
+		
+		System.out.println(output);
+		return output;
 	}
 }
