@@ -2,12 +2,13 @@ package emailApp;
 
 import java.util.Scanner;
 
-public class EmailApplication {
+public class EmailAddressApplication {
 	private String fName;
 	private String lName;
 	private String emailAddress;
+	private static Scanner scan = new Scanner(System.in);
 	
-	public EmailApplication() {
+	public EmailAddressApplication() {
 		
 	}
 	
@@ -37,13 +38,12 @@ public class EmailApplication {
 	
 	
 	public String toString() {
-		return "EmailApplication [fName=" + fName + ", lName=" + lName
+		return "EmailAddressApplication [fName=" + fName + ", lName=" + lName
 				+ ", emailAddress=" + emailAddress + "]";
 	}
 
 	public void createAnEmailAddress() {
 		
-		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter your first name");
 		String firstName = scan.nextLine();
 		this.setFName(firstName);

@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class EmailDatabase {
 	
-	private static ArrayList<EmailApplication> emailInfo = new ArrayList<>();
+	private static ArrayList<EmailAddressApplication> emailInfo = new ArrayList<>();
 
-	public static ArrayList<EmailApplication> getEmailInfo(){
+	public static ArrayList<EmailAddressApplication> getEmailInfo(){
 		return emailInfo;
 	}
 
-	public static void addToDatabase(EmailApplication e) {
+	public static void addToDatabase(EmailAddressApplication e) {
 		emailInfo.add(e);
 
 	}
