@@ -1,1 +1,1 @@
-# beginnerProjects
+# myProjects
